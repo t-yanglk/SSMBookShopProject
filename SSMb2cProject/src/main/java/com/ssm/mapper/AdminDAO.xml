@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssm.dao.AdminDao">
+	<!-- 查询管理员信息 -->
+	<select id="findAll" resultType="com.ssm.modle.Admin">
+		select adminid,aname,password,phone from t_admin 
+		<where>
+			<if test="adminid!=null and adminid!=''">
+				and adminid =#{adminid}
+			</if>
+			<if test="aname!=null and aname!=''">
+				and aname like '%${aname}%'
+			</if>
+			<if test="phone!=null and phone!=''">
+				and phone like '%${phone}%'
+			</if>
+		</where>
+	</select>
+	<!-- 根据编号查询管理员 -->
+	<select id="findByAdminid" resultType="com.ssm.modle.Admin">
+		select adminid,aname,password,phone from t_admin where adminid=#{adminid}
+	</select>
+	<!-- 修改管理员密码 -->
+	<update id="updateAdmin">
+		update t_admin set password=#{password} where adminid=#{adminid}
+	</update>
+	<!-- 根据id来删除管理员 -->
+	<delete id="delById">
+		delete from t_admin where adminid=#{adminid}
+	</delete>
+	<!-- 添加管理员信息 -->
+	<insert id="insertAdmin">
+	 insert into t_admin(adminid,aname,password,phone) values(#{adminid},#{aname},#{password},#{phone})
+	</insert>
+</mapper>

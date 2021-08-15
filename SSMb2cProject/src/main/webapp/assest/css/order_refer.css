@@ -1,0 +1,211 @@
+/* 公共样式 */
+.position_relative {
+	position: relative;
+}
+
+.vertical {
+	vertical-align: middle;
+}
+
+
+.logo {
+	margin-top: 30px;
+}
+
+.title {
+	margin-top: 35px;
+	margin-left: 20px;
+	font-size: 16px;
+	color: #000000;
+	padding-left: 20px;
+	border-left: 1px solid #cccccc;
+}
+
+.title a:hover{
+	color: red;
+}
+
+
+/* 内容页面 */
+.pay {
+	margin-top: 40px;
+	width: 100%;
+	border-top: 4px solid #63aa56;
+}
+
+.pay .content {
+	padding: 20px 40px;
+}
+
+.pay .content .img {
+	margin-right: 30px;
+}
+
+.pay .content .text {
+	width: 1026px;
+}
+
+.pay .content .text .des {
+	font-size: 18px;
+	color: #63AA56;
+}
+
+.pay .content .text .num {
+	color: #000000;
+}
+
+.pay .content .text .num a {
+	color: #CF0A2C;
+}
+
+.pay .content .text .losetime {
+	margin: 20px 0;
+	color: #000000;
+}
+
+.pay .content .text .losetime .time {
+	color: #CF0A2C;
+}
+
+.pay .content .text .price {
+	color: #000000;
+}
+
+.pay .content .text .price .num {
+	color: #CF0A2C;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.pay .content .text .price .dropdown {
+	margin: 20px 0;
+	text-align: right;
+}
+
+.pay .content .text .price .dropdown .droplogo {
+	width: 10px;
+}
+
+.pay .list {
+	padding: 10px 90px;
+	color: #000000;
+	height: 0;
+	overflow: hidden;
+}
+
+.pay .list span {
+	color: #CF0A2C;
+}
+
+.pay .list ul li {
+	margin: 10px 0;
+}
+
+
+/* 选项卡 */
+.content_bottom ul {
+	padding: 0;
+	list-style: none;
+
+}
+
+.tab_title li {
+	display: inline-block;
+	border: 1px solid #ddd;
+	border-bottom: 0;
+	padding: 12px 50px;
+	background-color: #f2f2f2;
+	color: #000000;
+	font-size: 14px;
+}
+
+.tab_title li:first-child {
+	background-color: white;
+}
+
+.tab_content .list {
+	border: 1px solid #DDDDDD;
+	display: none;
+	padding: 20px 40px;
+	height: 200px;
+}
+
+.tab_content .first {
+	display: block;
+	height: 200px;
+}
+
+.content_bottom .tab_content .logo {
+	padding: 10px;
+	color: #CF0A2C;
+}
+
+.content_bottom .tab_content .item {
+	width: 250px;
+	height: 50px;
+	line-height: 40px;
+	text-align: center;
+	border: 1px solid #d0d0d0;
+}
+
+.content_bottom .tab_content .img {
+	width: 90px;
+	margin-top: 10px;
+}
+
+.content_bottom .tab_content .hide {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	display: none;
+}
+
+.content_bottom .send {
+	background-color: #CF0A2C;
+	border: 1px solid #CF0A2C;
+	outline: 0;
+	padding: 10px 50px;
+	color: white;
+	font-size: 16px;
+	margin: 20px 0;
+	margin-left: 1000px;
+}
+
+
+/* footer样式 */
+.footer {
+	background-color: #e6e6e6;
+	height: 108px;
+	line-height: 108px;
+}
+
+.footer img {
+	margin-right: 20px;
+}
+
+.img_111 {
+	width: 617px;
+	display: inline-block;
+}
+.one_btn{
+	width: 200px;
+	line-height: 45px;
+	background-color: #CCCCCC;
+	color: #000000;
+	font-size: 18px;
+	margin-left: 100px;
+	margin-top: 25px;
+	border: 0;
+	outline: 0;
+}
+.two_btn{
+	width: 200px;
+	line-height: 45px;
+	background-color: #CA141D;
+	color: white;
+	font-size: 18px;
+	margin-left: 30px;
+	margin-top: 25px;
+	border: 0; 
+	outline: 0;
+}

@@ -1,0 +1,555 @@
+.background {
+	background-color: rgb(245, 245, 245);
+}
+
+.tab_title li {
+	display: inline;
+}
+
+.header {
+	background-color: #000000;
+	height: 50px;
+
+}
+
+.logo span {
+	color: white;
+	font-size: 20px;
+	line-height: 50px;
+}
+
+.quit a {
+	line-height: 50px;
+	color: white;
+	font-size: 16px;
+	line-height: 50px;
+}
+
+.header .sign {
+	padding-right: 14px;
+	border-right: 2px solid white;
+	margin-right: 10px;
+}
+
+.tab_title a {
+	font-size: 16px;
+	margin-left: 20px;
+}
+
+.background .nav {
+	padding-top: 20px;
+	margin-bottom: 20px;
+}
+
+.tab_content li:first-child {
+	display: inline-block;
+}
+
+.tab_content li {
+	display: inline;
+	width: 1000px;
+	display: none;
+}
+
+.tab_content .account {
+	background-color: white;
+	padding: 20px;
+	border: 1px solid gainsboro;
+	margin-bottom: 20px;
+}
+
+.co_label {
+	font-size: 14px;
+	color: black;
+	margin-bottom: 4px;
+}
+
+.tab_content .moblie {
+	padding-top: 25px;
+
+	border-top: 1px solid rgb(245, 245, 245);
+}
+
+.tab_content .explain {
+	margin-bottom: 10px;
+}
+
+.tab_content .moblie .phone {
+	margin-top: 10px;
+}
+
+.co_img {
+	margin-right: 20px;
+}
+
+.btn_type {
+
+	padding: 8px 30px;
+	border: 1px solid gainsboro;
+	border-radius: 20px;
+	color: #0066EE;
+}
+
+.co_text {
+	font-size: 14px;
+	color: black;
+}
+
+.tab_content .emil {
+	margin-top: 10px;
+	border-top: 1px solid rgb(245, 245, 245);
+	padding-top: 20px;
+}
+
+.tab_content .emil .site {
+	margin-top: 10px;
+}
+
+.biding .img img {
+	width: 36px;
+	height: 36px;
+}
+
+.biding {
+	background-color: white;
+	padding: 20px;
+	border: 1px solid gainsboro;
+	margin-bottom: 20px;
+}
+
+.biding .vx {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top: 1px solid gainsboro;
+}
+
+.biding .label {
+	margin-bottom: 20px;
+}
+
+.biding .name {
+	margin-top: 10px;
+}
+
+.biding .qq {
+	border-top: 1px solid gainsboro;
+	padding-top: 20px;
+	margin-bottom: 20px;
+}
+
+.biding .wb {
+	padding-top: 20px;
+	border-top: 1px solid gainsboro;
+}
+
+.safety .name {
+	margin-top: 10px;
+}
+
+.safety .label {
+	margin-bottom: 20px;
+}
+
+.safety {
+	background-color: white;
+	padding: 20px;
+	border: 1px solid gainsboro;
+	margin-bottom: 20px;
+}
+
+.safety .protect {
+	border-top: 1px solid gainsboro;
+	padding-top: 20px;
+	margin-bottom: 20px;
+}
+
+.footer {
+	text-align: center;
+
+}
+
+.footer a {
+	color: #bac8c5;
+}
+
+.background .container1,
+.header .container1 {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.pop_phone,.pop_email{
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	border: 1px solid black;
+	background-color: rgba(0, 0, 0, 0.4);
+	text-align: center;
+	padding-top: 70px;
+	display: none;
+}
+
+
+.pop_phone .push {
+	margin-top: 28px;
+}
+.pop_email .push {
+	margin-top: 40px;
+}
+
+.pop_phone .cancel {
+	margin-right: 40px;
+}
+.cancel_email{
+	margin-right: 40px;
+}
+
+.pop_phone .pop_phone_type {
+	padding: 6px 16px;
+	border-radius: 20px;
+	border: 1px solid gainsboro;
+	width: 100px;
+	font-size: 16px;
+	margin-right: 10px;
+	
+}
+.pop_phone_type{
+	padding: 6px 16px;
+	border-radius: 20px;
+	border: 1px solid gainsboro;
+	width: 100px;
+	font-size: 16px;
+	margin-right: 10px;
+}
+.pop_phone .farm  {
+	text-align: center;
+	width: 300px;
+	height: 220px;
+	background-color: white;
+	margin-left: 600px;
+	margin-top: 100px;
+	border-radius: 10px;
+}
+.pop_email .farm {
+	text-align: center;
+	width: 300px;
+	height: 220px;
+	background-color: white;
+	margin-left: 600px;
+	padding-top: 40px;
+	margin-top: 100px;
+	border-radius: 10px;
+}
+.pop_phone .farm span{
+	font-size: 19px;
+	color: #000000;	
+	display: block;
+	padding: 20px;
+	border-bottom: 1px solid gainsboro;
+}
+.pop_email .farm span{
+	font-size: 19px;
+	color: #000000;	
+}
+.phone_mistake{
+
+	width: 143px;
+	color: red;
+	font-size: 14px;
+
+	display: none;
+}
+.email_mistake{
+
+	
+	color: red;
+	font-size: 14px;
+
+	display: none;
+}
+.phone_input,.email_input{
+	padding: 4px 10px;
+	width: 260px;
+	border-radius: 20px;
+	border: 1px solid gainsboro;
+	margin-top: 20px;
+	outline: 0;
+}
+.massage{
+	background-color: white;
+	padding: 100px;
+}
+.massage .img{
+	margin-right: 40px;
+	height: 500px;
+}
+.massage .open{
+	width: 628px;
+	
+}
+.massage .open .title{
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 20px;
+	border-bottom: 1px solid gainsboro;
+}
+.massage .open .list{
+	padding: 20px;
+	border-bottom: 1px solid gainsboro;
+}
+.massage .open .list .nickname{
+	font-size: 15px;
+}
+.massage .open .list .name{
+	font-size: 15px;
+	color: #000000;
+}
+.massage .open .list .list_fr .name_compile{
+	border: 0px;
+	background-color: white;
+	color: #0066EE;
+	font-size: 15px;
+	
+}
+.massage .anopen{
+	margin-top: 40px;
+}
+.pop_nickname , .pop_huawei{
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	border: 1px solid black;
+	background-color: rgba(0, 0, 0, 0.4);
+	text-align: center;
+	padding-top: 70px;
+	display: none;
+}
+.pop_nickname .farm, .pop_huawei .farm , .pop_compellation .farm{
+	width: 440px;
+	height: 200px;
+	background-color: white;
+	margin: 0 auto;
+	margin-top: 200px;
+	border-radius: 10px;
+}
+/* .pop_huawei .farm , .pop_compellation .farm{
+	width: 460px;
+	height: 200px;
+	background-color: white;
+	margin: 0 auto;
+	margin-top: 200px;
+	border-radius: 10px;
+} */
+
+.pop_nickname .name  {
+	padding: 16px;
+	border-bottom: 1px solid gainsboro;
+	
+	
+}
+.pop_huawei .name , .pop_compellation .name {
+	padding: 18px;
+	border-bottom: 1px solid gainsboro;
+	
+}
+.pop_nickname .name  span{
+	font-size: 18px;
+	color: black;
+}
+.pop_huawei .name  span{
+	font-size: 18px;
+	color: black;
+}
+.pop_compellation .name  span{
+	font-size: 18px;
+	color: black;
+}
+.pop_nickname .input,.pop_huawei .input , .pop_compellation .input{
+	width: 400px;
+	padding: 6px;
+	border: 0px;
+	border: 1px solid gainsboro;
+	border-radius: 10px;
+	outline: 0;
+	
+}
+.pop_nickname .import,.pop_huawei .import, .pop_compellation .import{
+	margin: 20px;
+}
+.pop_nickname .type,.pop_huawei .type, .pop_compellation .type{
+	width: 180px;
+	padding: 6px;
+	border: 0px;
+	border: 1px solid gainsboro;
+	border-radius: 10px;
+	outline: 0;
+}
+ .pop_gender , .pop_compellation{
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	border: 1px solid black;
+	background-color: rgba(0, 0, 0, 0.4);
+	text-align: center;
+	padding-top: 70px;
+	display: none;
+	
+}
+.pop_gender .farm{
+	background-color: white;
+	margin: 0 auto;
+	margin-top: 180px;
+	width: 460px;
+	height: 342px;
+	padding: 30px;
+	
+}
+.pop_gender .farm .namex{
+	border-bottom: 1px solid gainsboro;
+	padding: 20px;
+}
+.pop_gender .name  span{
+	font-size: 18px;
+	color: black;
+}
+.pop_gender  .push{
+	width: 400px;
+	padding: 20px;
+		border-bottom: 1px solid gainsboro;
+}
+.pop_gender .type{
+	width: 180px;
+	padding: 6px;
+	border: 0px;
+	border: 1px solid gainsboro;
+	border-radius: 10px;
+	outline: 0;
+	margin-top: 20px;
+}
+.list_fl .Wdate{
+	width: 546px;
+	border: 0px;
+	outline: 0;
+	font-size: 18px;
+}
+.compellation_mistake{
+	color: red;
+	display: none;
+}
+.form-inline{
+	display: inline-block;
+}
+.region{
+	margin-top: 20px;
+}
+.region span{
+	margin-left: 20px;
+}
+.security{
+	background-color: white;
+	padding: 20px;
+}
+.security .title{
+	font-size: 16px;
+	color: black;
+	border-bottom: 1px solid gainsboro;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+.security .list .text{
+	margin-left: 20px;
+}
+.security .list_fl{
+	width: 250px;
+	margin-top: 40px;
+
+	
+}
+.security  .list_one{
+	margin-right: 280px;
+}
+.set .folk{
+	background-color: white;
+	padding: 20px;
+}
+/* 标题 */
+.set  .title , .privacy .title, .notification .big_title {
+	font-size: 15px;
+	font-weight: bold;
+	color: black;
+}
+/* 解释 */
+.set .explain ,.privacy .explain, .notification .title{
+	color: gray;
+	margin-top: 4px;
+}
+a{
+	color: black;
+}
+.set .explain a{
+	color: #0000FF;
+}
+.set{
+	margin-bottom: 20px;
+}
+.privacy{
+	padding: 20px;
+	background-color: white;
+	margin-bottom: 20px;
+}
+/* 下划线 */
+.privacy .caption{
+	border-bottom: 1px solid gainsboro;
+}
+.arrows{
+	width: 26px;
+}
+.privacy  .details{
+	padding: 20px;
+	border-bottom: 1px solid gainsboro;
+}
+.privacy  .content .img{
+	margin-right: 16px;
+}
+.privacy .text_two{
+	font-size: 12px;
+	color: gray;
+	margin-top: 4px;
+}
+.notification{
+	background-color: white;
+	padding: 20px;
+}
+.notification .headline{
+	border-bottom: 1px solid gainsboro;
+}
+.notification .arrow img{
+	width: 50px;
+}
+.arrow_hidden{
+	display: none;
+}
+.notification .arrow{
+	margin-top: 10px;
+	
+}
+.notification_content{
+	display: none;
+	padding-top: 20px;
+
+}
+.notification_content a{
+	color: #0000FF;
+}
+.notification_content span{
+	line-height: 2;
+}

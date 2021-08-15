@@ -1,0 +1,177 @@
+.details .title .designation{
+	font-size: 20px;
+	color: black;
+}
+.details .title{
+	padding-bottom:20px ;
+	border-bottom: 1px solid gainsboro;
+}
+.details  .designation_fr ul li{
+	display: inline;
+}
+.main_one,.main_two{
+
+	display: none;
+}
+.details .main_ul li:first-child{
+	display: inline;
+}
+/* 测试 */
+.main_first,.main_list{
+	width: 100%;
+	
+	
+}
+.details{
+	width: 1300px;
+}
+.sidebar{
+	border: 1px solid gainsboro;
+}
+.details .main{
+	margin-top: 20px;
+}
+.details .designation_fr li{
+	color: black;
+	font-size: 14px;
+	padding-bottom: 27px;
+	margin-left: 25px;
+}
+.details .designation_fr li:hover{
+	border-bottom: 3px solid gray;
+}
+.details .main_one .title_one ul li{
+	display: inline;
+}
+/* 测试 */
+.main_one_content{
+	display: none;
+	width: 1010px;
+
+}
+.main_one_content:first-child{
+	display: inline-block;
+}
+.main_one_title{
+	padding: 4px 12px;
+	background-color: rgb(245,245,245);
+	font-size: 15px;
+}
+.main .main_one .title_one{
+	margin-bottom: 30px;
+	color: black;
+}
+.main_one_title:hover{
+	background-color: black;
+	color: white;
+}
+.main_one .column{
+	width: 100%;
+	background-color: rgb(245,245,245);
+	margin-bottom: 20px;
+}
+.item-product{
+	padding-bottom: 10px;
+	border-bottom: 1px solid gainsboro;
+	margin-bottom: 10px;
+}
+.product-phone{
+	border-bottom: 1px solid gainsboro;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	height: 100px;
+}
+.product-phone .img{
+	width: 100px;
+	height:100%;
+	margin-left: 30px;
+	margin-right: 50px;
+}
+.product-phone .img img{
+	width: 100px;
+	height: 100%;
+}
+.product-phone .name{
+	width: 100px;
+	text-align: center;
+	padding-top: 30px;
+	font-size: 14px;
+	margin-right: 40px;
+}
+.product-phone .money{
+	padding-top: 30px;
+	font-size: 14px;
+	margin-right: 60px;
+	width: 100px;
+}
+.product-phone .quantity{
+	padding-top: 30px;
+	margin-right: 60px;
+	width: 100px;
+}
+.product-phone .state{
+	padding-top: 30px;
+	width: 100px;
+	margin-right: 40px;
+}
+.product-phone .actual{
+	padding-top: 30px;
+	width: 100px;
+	margin-right: 40px;
+}
+.product-phone .operation{
+	padding-top: 10px;
+}
+.list-group-item{
+	margin-bottom: 20px;
+}
+.main_one .column{
+	
+	padding:10px 20px;
+}
+.main_one .column .commodity{
+	padding: 0px 120px;
+	
+	border-right: 1px solid gainsboro;
+	margin-right: 20px;
+}
+.main_one .column .unit{
+	padding-right: 77px;
+	margin-right: 20px;
+	border-right: 1px solid gainsboro;	
+}
+.main_one .column .borrow{
+	padding-right: 50px;
+	padding-left:10px;
+	border-right: 1px solid gainsboro;	
+}
+.main_one .column .isreturn{
+	padding-right: 77px;
+	padding-left:20px;
+	border-right: 1px solid gainsboro;	
+}
+.main_one  .column  .quantity{
+	padding-right: 77px;
+	padding-left:20px;
+	border-right: 1px solid gainsboro;	
+}
+.main_one  .column  .phase{
+	padding-left: 46px;
+	padding-right: 77px;
+	margin-right: 20px;
+	border-right: 1px solid gainsboro;	
+}
+.main_one  .column  .payment{
+	padding-right: 77px;
+	padding-left:10px;
+	border-right: 1px solid gainsboro;	
+}
+.main_one_content .hint{
+	margin-left:400px ;
+}
+.main_two .hint{
+	margin-left:400px ;
+}
+.main_two .hint a{
+	color: red;
+}

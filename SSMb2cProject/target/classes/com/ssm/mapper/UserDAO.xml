@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssm.dao.UserDao">
+	
+	<resultMap type="com.ssm.modle.User" id="findAll">
+		<result column="user_id" property="userid"/>
+		<result column="user_name" property="uname"/>
+		<result column="password" property="password"/>
+		<result column="phone" property="phone"/>
+		<result column="money" property="money"/>
+	</resultMap>
+
+	<!-- 查询所有用户 -->
+	<select id="findAll" resultMap="findAll">
+		select * from t_user
+		<where>
+			<if test="userid!=null and userid!=''">
+				and user_id =#{userid}
+			</if>
+			<if test="uname!=null and uname!=''">
+				and user_name like '%${uname}%'
+			</if>
+			<if test="phone!=null and phone!=''">
+				and phone like '%${phone}%'
+			</if>
+		</where>
+	</select>
+	<!-- 根据id查询 -->
+	<select id="findByUser" resultMap="findAll">
+		select user_id,user_name,password,phone,money from t_user where user_id=#{userid}
+	</select>
+	<!-- 对用户进行注册 -->
+	<insert id="insertUser">
+		insert into t_user(user_name,user_id,password,phone) values(#{uname},#{uid},#{password},#{phone})
+	</insert>
+	<!-- 根据用户ID查询用户 -->
+	<select id="findUser" resultMap="findAll">
+		select * from t_user where user_id=#{userid}
+	</select>
+	<!-- 修改用户密码 -->
+	<update id="updatepassword">
+		update t_user set password=#{password} where user_id=#{userid}
+	</update>
+	<!-- 修改用户资金 -->
+	<update id="updateMoney">
+		update t_user set money=#{money} where user_id=#{userid}
+	</update>
+	<!-- 根据id来删除用户 -->
+	<delete id="delById">
+		delete from t_user where user_id=#{userid}
+	</delete>
+</mapper>

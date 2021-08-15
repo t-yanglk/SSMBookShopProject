@@ -1,0 +1,9 @@
+//点击支付
+$(".afford").click(function(){
+	if(state=="已支付"){
+		layer.alert("已支付，无需再次支付！");
+	}else{
+		$(".affordid").attr("value",orderid);
+		$(".orderafford").submit();
+	}
+});

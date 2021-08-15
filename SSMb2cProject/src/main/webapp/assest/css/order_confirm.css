@@ -1,0 +1,451 @@
+
+
+body {
+	background: #f5f5f5;
+}
+/* .clear {
+	content: "";
+	width: 0;
+	display: block;
+	clear: both;
+}
+ */
+
+
+.login-prompt {
+    padding: 0 20px;
+    height:20px;
+    margin-top: 10px;
+}
+.address-main {
+	padding-top: 20px;
+	padding-left: 40px;
+}
+.address-title {
+   font-size: 18px;
+   color: #3a3a3a;
+   padding-bottom: 20px;
+}
+
+.address-box {
+	width: 360px;
+	text-align: center;
+	padding: 50px 0;
+	border: 1px solid #eaeaea;
+	font-size: 14px;
+	color: #3A3A3A;
+	cursor: pointer;
+}
+
+.address-box span:first-child {
+	font-size: 20px;
+	cursor: pointer;
+}
+.address-box span:first-child:hover{
+	color: red;
+}
+/* 验证表格 */
+
+
+.address-content {
+
+	padding-bottom: 80px;
+	height: 374px;
+	
+}
+
+.address-content .address-title{
+	text-align: center;
+	font-size: 18px;
+	color: #444;
+}
+
+
+.address-content .star {
+	color: #ca151e;
+	vertical-align: middle;
+	display: inline-block;
+	margin-right: 4px;
+}
+
+.address-content form label {
+	display: inline-block;
+	width: 90px;
+	text-align: right;
+	padding-right: 9px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	color: rgb(58, 58, 58);
+}
+
+.receiver input {
+	width: 254px;
+	padding: 8px 12px;
+	border: 1px solid #dedede;
+	line-height: 21px;
+	font-size: 14px;
+	outline: 0;
+}
+
+.receiver {
+	padding-bottom: 17px;
+	margin-left: 35px;
+}
+
+.phone-number input:nth-child(2){
+	width: 255px;
+	padding: 8px 12px;
+	border: 1px solid #dedede;
+	line-height: 21px;
+	font-size: 14px;
+	outline: 0;
+	color: rgb(153, 153, 153);
+}
+.phone-number input:last-child{
+	width: 212px;
+	padding: 8px 12px;
+	border: 1px solid #dedede;
+	line-height: 21px;
+	font-size: 14px;
+	outline: 0;
+	color: rgb(153, 153, 153);
+}
+
+.phone-number {
+	padding-bottom: 17px;
+	margin-left: 50px;
+}
+
+.address input {
+	width: 254px;
+	padding: 8px 12px;
+	border: 1px solid #dedede;
+	line-height: 21px;
+	font-size: 14px;
+	outline: 0;
+	vertical-align: middle;
+}
+.address {
+	padding-bottom: 13px;
+	margin-left: 50px;
+}
+.select{
+	display: inline-block;
+}
+.select select{
+	display: inline-block;
+	width: 100px;
+	height: 40px;
+	
+}
+.textarea {
+	
+	margin-left: 101px;
+}
+
+.textarea-section {
+	width: 317px;
+	padding-top: 10px;
+	padding-left: 10px;
+	font-size: 14px;
+	border: 1px solid #dedede;
+}
+.address-btn {
+	text-align: center;
+	padding-top: 15px;
+	
+}
+.remove-btn,
+.keep-btn {
+	display: inline-block;
+	width: 172px;
+	border: 1px solid #ddd;
+    background: #fff;
+    font-size: 18px;
+    margin: 0 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #3A3A3A;
+    padding: 15px 0;
+    outline: 0;
+}
+.remove-btn{
+	margin-left: 42px;
+
+}
+
+
+.keep-update {
+
+	background-color: #ca141d;
+	color: #fff;
+	outline: 0;
+	display: inline-block;
+    width: 172px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    margin: 14px 32px;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 15px 0;
+    display: none;
+   
+    
+}
+.keep-box {
+	margin-right: 20px;
+    width: 360px;
+    height: 122px;
+    font-size: 14px;
+    position: relative;
+	border: 1px solid gainsboro;
+}
+
+.tacit {
+    background: #a4a4a4;
+    width: 70px;
+    line-height: 22px;
+    color: #fff;
+    text-align: center;
+	display: none;
+}
+
+.keep-name {
+	display: inline-block;
+	padding-top: 25px;
+	margin-left: 20px;
+}
+
+
+.keep-phone {
+	display: inline-block;
+	margin-left: 180px;
+	margin-right: 20px;
+}
+
+.keep-address {
+	padding-top: 20px;
+	margin-left: 20px;
+}
+
+.keep-tacit-btn .complie{
+	margin-right: 10px;
+	font-size: 14px;
+	cursor: pointer;
+}
+.keep-tacit-btn .delet{
+	margin-right: 22px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+
+.keep-tacit-btn .delet  {
+   width: 36px;
+   height: 17px;
+   
+   margin-right: 3px;
+   
+}
+
+.keep-tacit-btn {
+	display: none;
+}
+
+.keep-box:hover .keep-tacit-btn {
+	display: block;
+}
+
+.manner-section {
+    background: #fff;
+    padding: 40px 40px 16px;
+}
+
+.manner {
+	background: #f6f6f6;
+    border: 1px solid #eaeaea;
+    width: 1120px;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.address-section {
+	background-color: #fff;
+	padding-bottom: 30px;
+}
+
+
+
+.keep-btn , .remove-btn{
+	background-color: red;
+	color: white;
+}
+.delet{
+	color: red;
+}
+.order_content{
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+.order_content .container{
+	background-color: white;
+	
+}
+.order_content .content{
+	margin: 20px;
+	border: 1px solid gainsboro;
+	height: 200px;
+}
+.content_fl{
+	height:calc(100% - 20px);
+	padding: 10px;
+}
+.content_fr{
+	width: 386px;
+	background-color: #f5f5f5;
+	height: 200px;
+}
+.content_fl .list_one .hover{
+	width: 295px;
+	margin-left: 40px;
+}
+.content_fl .list_one  .quantity{
+	margin-left: 40px;
+}
+.content_fl .list_one .money{
+	margin-left: 117px;
+}
+.content_fl .list_one{
+	height:100%;
+}
+.content_fl .list_two span:nth-child(1){
+	margin-left: 20px;
+	margin-right: 135px;
+}
+.content_fl .list_two span:nth-child(2){
+
+	margin-right: 283px;
+}
+.content_fl .list_two{
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom : 1px solid gainsboro;
+}
+.list_three div:nth-child(1){
+	font-size: 15px;
+	color: black;
+}
+.list_three div:nth-child(2){
+	margin-left: 70px;
+	margin-bottom: 20px;
+} 
+.list_three div:nth-child(3){
+	margin-left: 70px;
+	margin-top: 20px;
+} 
+.list_four div:nth-child(1){
+	font-size: 15px;
+	color: black;
+	margin-bottom: 10px;
+}
+.list_four div:nth-child(2){
+	margin-left: 70px;
+	margin-bottom: 20px;
+} 
+.list_four div:nth-child(3){
+	margin-left: 70px;
+	margin-top: 20px;
+} 
+.list_four{
+	margin-top: 20px;
+}
+.order_content .base div:nth-child(1){
+	margin-top: 20px;
+	margin-left:20px ;
+	margin-bottom:50px;
+	color: black;
+	font-size: 16px;
+}
+.order_content .base .link{
+	color: red;
+}
+.order_content .base{
+	height: 100%;
+}
+.order_content .base .money{
+	margin-right: 10px;
+}
+.order_content .base .all{
+	color: black;
+	font-size: 15px;
+	margin-left: 41px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.order_content .base .all_money{
+	font-size: 19px;
+	color: red;
+}
+.order_content .base .money {
+	margin-top: 302px;
+	margin-left: 78px;
+}
+.submission_bg{
+	background-color: white;
+	padding-right: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.submission  .sub_price span:nth-child(1){
+	font-size: 20px;
+	color: red;
+	margin-left: 10px;
+}
+.submission  .sub_price span:nth-child(2){
+	font-size: 14px;
+	color: black;
+	margin-top: 4px;
+}
+.submission  .sub_price{
+	margin-bottom: 10px;
+}
+.submission  .accumulate span:nth-child(1){
+	font-size: 16px;
+	color: black;
+	margin-left: 10px;
+	margin-right: 60px;
+}
+.submission  .accumulate span:nth-child(2){
+	font-size: 14px;
+	color: black;
+	
+
+}
+.submission-btn {
+	margin-top: 20px;
+    text-align: center;
+	background-color: gainsboro;
+    color: firebrick;
+    width: 172px;
+    line-height: 46px;
+    font-size: 18px;
+    border-radius: 2px;
+	outline: 0px;
+	border: 0px;
+	display: inline-block;
+	cursor: pointer;
+}
+.submission-btn:hover{
+	background-color: red;
+	color: white;
+}
+.error-tip{
+	margin-left: 100px;
+	margin-top: 2px;
+	color: red;
+	display: none;
+}
+.layui-layer{
+	width: 771px;
+}

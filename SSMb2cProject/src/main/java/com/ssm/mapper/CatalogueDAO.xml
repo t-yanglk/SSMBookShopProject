@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssm.dao.CatalogueDao">
+	
+	<resultMap type="com.ssm.modle.Catalogue" id="findAll">
+		<result column="catalogue_id" property="catalogueid" />
+		<result column="cata_name" property="cataname" />
+		<result column="cata_img" property="cataimg" />
+		<result column="depth" property="depth" />
+		<association column="precata_id" property="parentcata" select="findByPreid" />
+		<collection column="catalogue_id" property="childrencata" select="findAllChildren" />
+		<collection column="catalogue_id" property="comms" select="com.ssm.dao.CommodityDao.findCommsByPreid"></collection>
+		<collection column="catalogue_id" property="rootcomms" select="com.ssm.dao.CommodityDao.findCommsByRootid"></collection>
+	</resultMap>
+	<!-- 查询分类信息 -->
+	<select id="findAll" resultMap="findAll">
+		select catalogue_id,cata_name,cata_img,depth,precata_id from t_catalogue
+		<where>
+		<if test="catalogueid!=null and catalogueid!=''">
+			and catalogue_id=#{catalogueid}
+		</if>
+		<if test="cataname!=null and cataname!=''">
+			and cata_name like '%${cataname}%'
+		</if>
+		<if test="depth!=null and depth!=''">
+			and depth=#{depth}
+		</if>
+		</where>
+	</select>
+	<!-- 根据分类id进行查询 -->
+	<select id="findByPreid" resultMap="findAll">
+		select catalogue_id,cata_name,cata_img,depth,precata_id from t_catalogue where catalogue_id=#{cataid}
+	</select>
+	<!-- 查询子类别 -->
+	<select id="findAllChildren" resultMap="findAll">
+		select catalogue_id,cata_name,cata_img,depth,precata_id from t_catalogue where precata_id=#{preid}
+	</select>
+	<!-- 查询指定深度的分类 -->
+	<select id="findDepthItem" resultMap="findAll">
+		select catalogue_id,cata_name,cata_img,depth,precata_id from t_catalogue where depth=#{level} 
+	</select>
+	<!-- 根据分类id进行删除 -->
+	<delete id="delByCataid">
+		delete from t_catalogue where catalogue_id=#{cataid}
+	</delete>
+	<!-- 根据父类id进行删除多条记录 -->
+	<delete id="delByPreid">
+		delete from t_catalogue where precata_id=#{cataid}
+	</delete>
+	<!-- 添加分类信息 -->
+	<insert id="insertCata">
+		insert into t_catalogue(catalogue_id,cata_name,cata_img,depth,precata_id) values(#{cataid},#{cataname},#{cataimg},#{depth},#{preid})
+	</insert>
+	<!-- 修改分类信息 -->
+	<update id="updateCata">
+		update t_catalogue set cata_name=#{cataname},cata_img=#{cataimg},precata_id=#{preid} where catalogue_id=#{cataid}
+	</update>
+	
+</mapper>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssm.dao.UserOrderDao">
+
+	<resultMap type="com.ssm.modle.UserOrder" id="findAll">
+		<id column="order_id" property="orderid"/>
+		<result column="user_id" property="userid"/>
+		<result column="commodity_id" property="commid"/>
+		<result column="address" property="address"/>
+		<result column="count" property="count"/>
+		<result column="total_price" property="price"/>
+		<result column="order_state" property="state"/>
+		<result column="is_return" property="isreturn"/>
+		<result column="book_subcribe" property="subcribe"/>
+		<result column="input_time" property="intime"/>
+		<association column="user_id" property="user" select="com.ssm.dao.UserDao.findUser"/>
+		<association column="commodity_id" property="comm" select="com.ssm.dao.CommodityDao.findById"/>
+	</resultMap>
+
+	<!-- 查询所有用户订单 -->
+	<select id="findAllOrders" resultMap="findAll">
+		select order_id,user_id,commodity_id,address,count,total_price,order_state,book_subcribe,is_return,input_time from t_user_order
+		<where>
+			<if test="orderid!=null and orderid!=''">
+				and order_id=#{orderid}
+			</if>
+			<if test="userid!=null and userid!=''">
+				and user_id = #{userid}
+			</if>
+			<if test="state!=null and state!=''">
+				and order_state = #{state}
+			</if>
+		</where>
+	</select>
+	
+	<!-- 根据订单编号查询订单  -->
+	<select id="findByOrderid" resultMap="findAll">
+		select order_id,user_id,commodity_id,address,count,total_price,order_state,book_subcribe,is_return,input_time  from t_user_order where order_id=#{orderid}
+	</select>
+	<!-- 查询某个用户的所有订单并按照时间排序 -->
+	<select id="orderByTime" resultMap="findAll">
+		select order_id,user_id,commodity_id,address,count,total_price,order_state,book_subcribe,is_return,input_time  from t_user_order where user_id=#{userid} order by input_time desc 
+	</select>
+	<!-- 查询某个用户的所有订单 -->
+	<select id="findByUserid" resultMap="findAll">
+		select order_id,user_id,commodity_id,address,count,total_price,order_state,book_subcribe,is_return,input_time  from t_user_order where user_id=#{userid}
+	</select>
+	<!-- 根据商品编号查询的所有订单 -->
+	<select id="findByCommid" resultMap="findAll">
+		select order_id,user_id,commodity_id,address,count,total_price,order_state,book_subcribe,is_return,input_time  from t_user_order where commodity_id=#{commid}
+	</select>
+	<!-- 保存用户订单 -->
+	<insert id="saveOrder">
+		insert into t_user_order (order_id,user_id,commodity_id,count,total_price,address,book_subcribe,is_return,input_time)
+		values(#{orderid},#{userid},#{commid},#{count},#{price},#{address},#{subcribe},#{isreturn},#{intime})
+	</insert>
+	<!-- 根据订单编号删除订单 -->
+	<delete id="delByOrderid">
+		delete from t_user_order where order_id=#{orderid}
+	</delete>
+	<!-- 更改订单支付状态 -->
+	<update id="updateorder">
+		update t_user_order set order_state='1' where order_id=#{orderid}
+	</update>
+	<!-- 更改归还状态 -->
+	<update id="updateOrderReturn">
+		update t_user_order set is_return='Y' where order_id=#{orderid}
+	</update>
+</mapper>

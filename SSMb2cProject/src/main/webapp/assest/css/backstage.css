@@ -1,0 +1,30 @@
+@charset "UTF-8";
+.comm,.cata,.indent,.cart,.cataloguechart,.bookechart{
+	padding-left: 20px;
+	cursor: pointer;
+	font-family: 幼圆;
+	color:#d9d9d9;
+}
+.comm:hover,.cata:hover,.indent:hover,.cart:hover,.cataloguechart:hover,.bookechart:hover{
+	background-color:rgba(200,200,200,0.5); 
+}
+.titlecss{
+	font-family: 隶书;
+	font-size: 25px !important;
+	color:#009688;
+}
+.fontcss{
+	font-family:幼圆;
+	font-size: 20px;
+	text-align:center;
+	color:#c0c0c0 !important;
+	cursor: pointer;
+}
+.fontcsstwo{
+	font-family:幼圆;
+	font-size: 15px;
+	text-align:center;
+	color:#c0c0c0 !important;
+	cursor: pointer;
+}
+

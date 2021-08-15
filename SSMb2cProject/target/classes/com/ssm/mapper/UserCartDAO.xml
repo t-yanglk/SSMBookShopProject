@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssm.dao.UserCartDao">
+	<resultMap type="com.ssm.modle.UserCart" id="findAll">
+		<result column="user_id" property="userid"/>
+		<result column="commodity_id" property="commid"/>
+		<result column="comm_count" property="commcount"/>
+		<association column="user_id" property="user" select="com.ssm.dao.UserDao.findUser"/>
+		<association column="commodity_id" property="comm" select="com.ssm.dao.CommodityDao.findById"/>
+	</resultMap>
+	
+	<!-- 查询所有购物车 -->
+	<select id="findAllCart" resultMap="findAll">
+		select user_id,commodity_id,comm_count from t_user_cart 
+		<where>
+			<if test="userid!=null and userid!=''">
+				and user_id=#{userid}
+			</if>
+			<if test="commid!=null and commid!=''">
+				and commodity_id = #{commid}
+			</if>
+		</where>
+	</select>
+	<!-- 查询相应用户购物车 -->
+	<select id="findByUid" resultMap="findAll">
+		select user_id,commodity_id,comm_count from t_user_cart where user_id=#{userid}
+	</select>
+	<!-- 根据商品ID来查询购物车 -->
+	<select id="findByCommid" resultMap="findAll">
+		select user_id,commodity_id,comm_count from t_user_cart where commodity_id=#{commid} 
+	</select>
+	<!-- 查询用户是否购买过此商品 -->
+	<select id="findCommCart" resultMap="findAll">
+		select user_id,commodity_id,comm_count from t_user_cart where user_id=#{userid} and commodity_id=#{commid}
+	</select>
+	
+	<!-- 提交保存用户购物车 -->
+	<insert id="insertCart">
+		insert into t_user_cart(user_id,commodity_id,comm_count)
+		values(#{userid},#{commid},#{commcount});
+	</insert>
+	<!-- 删除用户购物车信息 -->
+	<delete id="delCartComm">
+		delete from t_user_cart where user_id=#{userid} and commodity_id=#{commid}
+	</delete>
+	<!-- 删除用户的所有商品 -->
+	<delete id="delAllById">
+		delete from t_user_cart where user_id=#{userid}
+	</delete>
+	<!-- 修改用户购物车商品数量 -->
+	<update id="updateCommCount">
+		update t_user_cart set comm_count=#{commcount} where user_id=#{userid} and commodity_id=#{commid}
+	</update>
+</mapper>

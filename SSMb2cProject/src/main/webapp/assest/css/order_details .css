@@ -1,0 +1,325 @@
+.btn button {
+	width: 118px;
+	line-height: 28px;
+	font-size: 14px;
+	margin-left: 20px;
+	margin-right:30px;
+	margin-top: 50px;
+}
+
+.btn span {
+	font-size: 24px;
+	color: #3A3A3A;
+	line-height: 28px;
+	margin-left: 70px;
+}
+
+.one_btn {
+	background-color: white;
+	color: #3A3A3A;
+	border: 1px solid #ccc;
+	outline: 0;
+}
+
+.one_btn:hover {
+	background-color: #3A3A3A;
+	color: white;
+}
+
+.two_btn {
+	background-color: #e88b00;
+	border: 1px solid #E88B00;
+	color: white;
+	outline: 0;
+}
+
+.two_btn:hover {
+	background-color: #ce7800;
+}
+
+
+
+.three_btn:hover {
+	background-color: #b9121a;
+}
+
+.btn {
+	padding-top: 20px;
+}
+
+.lasttime {
+	width: 900px;
+	background-color: #fffdde;
+	font-size: 14px;
+	color: #3A3A3A;
+	padding: 10px 0 10px 12px;
+	margin-left: 70px;
+	margin-top: 20px;
+	line-height: 30px;
+}
+
+.lasttime img {
+	vertical-align: middle;
+	width: 20px;
+}
+
+.lasttime span {
+	margin-left: 0;
+	color: #CA141D;
+	font-size: 14px;
+}
+
+.right {
+	background-color: white;
+	width: 1000px;
+	margin-left: 200px;
+}
+
+.img {
+	width: 860px;
+	margin-left: 100px;
+	margin-top: 20px;
+}
+
+.now_time {
+	width: 100px;
+	text-align: center;
+	font-size: 14px;
+	color: #3A3A3A;
+	margin-left: 88px;
+	margin-top: 10px;
+}
+
+.sell {
+	font-size: 18px;
+	color: #3A3A3A;
+	margin-left: 70px;
+	margin-top: 50px;
+}
+
+.border {
+	font-size: 14px;
+	color: #3a3a3a;
+	width: 820px;
+	border: 0;
+	background-color: #f4f4f4;
+	margin-left: 70px;
+	padding-left: 80px;
+	margin-top: 20px;
+	line-height: 45px;
+}
+
+.border span {
+	font-size: 14px;
+	color: #3a3a3a;
+	margin-left: 300px;
+}
+
+.border b {
+	margin-left: 80px;
+}
+
+.now {
+	color: #CA141D;
+	font-size: 14px;
+	margin-left: 75px;
+	margin-top: 10px;
+}
+
+.now span {
+	margin-left: 95px;
+	font-size: 14px;
+	color: #CA141D;
+}
+
+.now .now_time {
+	margin-left: 5px;
+	font-size: 14px;
+	color: #CA141D;
+}
+
+.bor {
+	width: 900px;
+	border-bottom: 1px solid #ccc;
+	margin-left: 70px;
+	margin-top: 10px;
+}
+
+.box {
+	padding: 20px 30px;
+	height: 160px;
+	margin-left: 70px;
+}
+
+.br {
+	border-left: 1px solid #CCCCCC;
+	height: 120px;
+	margin-right: 30px;
+}
+
+.box .msg_left,
+.msg_right {
+	font-size: 14px;
+	color: #3a3a3a;
+	width: 300px;
+	margin-right: 30px;
+	line-height: 30px;
+}
+
+.msg {
+	line-height: 20px;
+	font-size: 12px;
+	color: #a2a2a2;
+}
+
+.msg span {
+	color: #3a3a3a;
+	font-size: 12px;
+	margin-left: 0;
+}
+
+.commodity {
+	font-size: 14px;
+	color: #3A3A3A;
+	margin-left: 70px;
+}
+
+.commodity span {
+	color: #a1a1a1;
+	font-size: 12px;
+	margin-left: 0;
+}
+
+.border_1 .name {
+	width: 300px;
+	text-align: center;
+
+}
+
+.border_1 .else {
+	width: 120px;
+	text-align: center;
+}
+
+.border_1 {
+	font-size: 14px;
+	color: #3a3a3a;
+	width: 900px;
+	border: 0;
+	background-color: #f4f4f4;
+	margin-left: 70px;
+	margin-top: 20px;
+	height: 35px;
+	padding-top: 10px;
+}
+
+.border_1 i {
+	float: right;
+	font-style: normal;
+}
+
+.border_2 {
+	font-size: 12px;
+	color: #3a3a3a;
+	width: 900px;
+	height: 200px;
+	border: 0;
+	background-color: white;
+	margin-left: 70px;
+	padding-top: 10px;
+}
+
+.border_2 .name {
+	width: 299px;
+	text-align: center;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+}
+
+.border_2 .else {
+	width: 119px;
+	text-align: center;
+	border-right: 1px solid #ccc;
+	line-height: 100px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+}
+
+.border_2 .else:last-child {
+	border: 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.border_2 img {
+	display: inline-block;
+	width: 100px;
+}
+
+.border_2 a {
+	display: inline-block;
+}
+
+.border_2 .txt {
+	width: 180px;
+	line-height: 20px;
+}
+
+.text .number div {
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.text .chinese div {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.text .chinese {
+	margin-right: 60px;
+}
+
+.text .number {
+	margin-right: 30px;
+}
+
+.total {
+	margin-right: 30px;
+	margin-top: 15px;
+}
+
+.total i {
+	font-style: normal;
+	font-size: 14px;
+	color: #3a3a3a;
+}
+
+.total b {
+	font-size: 30px;
+	color: #CA141D;
+}
+
+.total div {
+	font-size: 12px;
+	color: #3a3a3a;
+	line-height: 25px;
+}
+
+.afford{
+	background-color: gainsboro;
+	width: 150px;
+	line-height: 50px;
+	border: 0;
+	outline: 0;
+	float: right;
+	color: firebrick;
+	font-weight: bold;
+	margin: 30px 30px 80px 0;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+}
+.afford:hover{
+	background-color: red;
+	color: white;
+}

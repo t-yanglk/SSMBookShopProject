@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssm.dao.CommodityDao">
+
+	<resultMap type="com.ssm.modle.Commodity" id="findAll">
+		<id column="comm_id" property="commid" />
+		<result column="comm_name" property="commname" />
+		<result column="comm_price" property="commprice" />
+		<result column="comm_img" property="commimg" />
+		<result column="root_id" property="rootid" />
+		<result column="precata_id" property="preid" />
+		<result column="description" property="description" />
+		<result column="count" property="count" />
+		<result column="comm_details" property="commdetails" />
+		<result column="sales_volume" property="salesvolume" />
+	</resultMap>
+	<!-- 查询所有商品 -->
+	<select id="findAll" resultMap="findAll">
+		select comm_id,comm_name,comm_price,comm_img,root_id,precata_id,description,count,comm_details,sales_volume from t_commodity
+		<where>
+			<if test="commid!=null and commid!=''">
+				and comm_id=#{commid}
+			</if>
+			<if test="commname!=null and commname!=''">
+				and comm_name like '%${commname}%'
+			</if>
+			<if test="commprice!=null and commprice!=''">
+				and comm_price &lt; ${commprice}
+			</if>
+			<if test="preid!=null and preid !=''">
+				and precata_id = #{preid}
+			</if>
+		</where>
+	</select>
+	<!-- 浏览量降序排名 -->
+	<select id="selectDescPrice" resultMap="findAll">
+		select comm_id,comm_name,comm_price,comm_img,root_id,precata_id,description,count,comm_details,sales_volume from t_commodity order by sales_volume desc
+	</select>
+	
+	<!-- 根据父类ID来查询商品 -->
+	<select id="findByPreid" resultMap="findAll">
+		select
+		comm_id,comm_name,comm_price,comm_img,root_id,precata_id,description,count,comm_details,sales_volume
+		from t_commodity where precata_id=#{preid}
+	</select>
+	<!-- 查询分类下的商品 -->
+	<select id="findCommsByPreid" resultMap="findAll">
+		select
+		comm_id,comm_name,comm_price,comm_img,root_id,precata_id,description,count,comm_details,sales_volume
+		from t_commodity where precata_id=#{preid}
+	</select>
+	<!-- 根据商品ID查询商品 -->
+	<select id="findById" resultMap="findAll">
+		select
+		comm_id,comm_name,comm_price,comm_img,root_id,precata_id,description,count,comm_details,sales_volume
+		from t_commodity where comm_id=#{commid}
+	</select>
+	<!-- 查询总类别下的所有商品 -->
+	<select id="findCommsByRootid" resultMap="findAll">
+		select
+		comm_id,comm_name,comm_price,comm_img,root_id,precata_id,description,count,comm_details,sales_volume
+		from t_commodity where root_id=#{rootid}
+	</select>
+	<delete id="delByCheckid">
+		delete from t_commodity where comm_id=#{ids}
+	</delete>
+	<!-- 对商品进行添加 -->
+	<insert id="insertcomm">
+		insert into t_commodity(comm_id,comm_name,comm_price,comm_img,root_id,precata_id,description,count,comm_details)
+		values(#{commid},#{commname},${commprice},#{commimg},#{rootid},#{preid},#{description},${count},#{commdetails})
+	</insert>
+	<!-- 对商品进行修改 -->
+	<update id="updateComm">
+		update t_commodity set comm_name=#{commname},comm_img=#{commimg},comm_price=#{commprice},
+		root_id=#{rootid},precata_id=#{preid},description=#{description},count=#{count},comm_details=#{commdetails} where comm_id=#{commid}
+	</update>
+	<!-- 修改图书库存 -->
+	<update id="updateCommCount">
+		update t_commodity set count=#{bookcount} where comm_id=#{commid}
+	</update>
+	<!-- 对商品的销售量进行统计 -->
+	<update id="updateSales">
+		update t_commodity set sales_volume=#{sales} where comm_id=#{commid}
+	</update>
+</mapper>
